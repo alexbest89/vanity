@@ -1,7 +1,3 @@
-<?php
-  //  include 'json-events.php';
-?>
-
 <!DOCTYPE html>
 <html>
   <head>
@@ -36,6 +32,7 @@
 
             #calendar {
                 width: 100%;
+                height: 100%;
                 margin: 0 auto;
             }
 
@@ -49,6 +46,7 @@
                 width: 80px;
                 height: 30px;
             }
+
       </style>
   </head>
 
@@ -59,7 +57,7 @@
       </div>
       <div class="app-content">
           <p class="app-section">
-					Prenota il tuo trattamento comodamente!
+              Prenota il tuo trattamento comodamente!
           </p>
           
           <div class="app-section">
@@ -119,8 +117,7 @@
           <div class="app-section" id="appuntamento">
               <form>
                   <input name="giorno" class="app-input" id="giorno"><strong></strong></input>
-                <input class="app-input" name="orario" id="orario" placeholder="Inserisci l'ora">
-                <input class="app-input" name="note" id="note" placeholder="Note"></input>
+                <input class="app-input" type="datetime" name="orario" id="orario" placeholder="Inserisci l'ora">
                 <button type="submit" id="btn-calen">Success</button>
               </form>
           </div>
@@ -155,7 +152,7 @@
                         $(page).find("#calendar").hide();
 
                         $("#btn-calen").click(function () {
-                            alert("tasto premuto" + $("#giorno").val() + " " + $("#orario").val() + " " + $("#note").val());
+                            alert("tasto premuto" + $("#giorno").val() + " " + $("#orario").val());
                         })
                     }
                 });

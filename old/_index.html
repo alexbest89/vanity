@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>My App</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+    <link rel="stylesheet" href="app.min.css">
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
+
+    <style>
+
+        #sottoTitolo{
+			text-align:center;
+		}
+
+        button{
+            border:none;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="app-page" id ="prova" data-page="home">
+
+        <div class="app-topbar blue">
+            <div class="app-title">Claudia Beauty</div>
+        </div>
+
+        <div class="app-content">
+            <div class="app-section">
+                <p id="sottoTitolo">Prenota il tuo trattamento nel nostro salone o nel centro estetico</p>
+            </div>
+
+            <div class="app-section">
+                <div class="app-button" data-target="parrucchieri">Claudia Parrucchieri</div>
+            </div>
+
+            <div class="app-section">
+                <div class="app-button" data-target="estetica">Centro Estetico</div>
+            </div>
+        </div>
+    </div>
+
+    <div class="app-page" data-page="parrucchieri">
+        <div class="app-topbar">
+            <div class="app-title">Prenota il tuo trattamento</div>
+            <div class="right app-button" data-back>Fine</div>
+        </div>
+
+        <div class="app-content">
+
+            <div class="app-section">
+                Nome<input class="app-input" id="mittente" name="mittente" placeholder="nome">
+            </div>
+
+            <div class="app-section">
+                telefono<input class="app-input" id="tel" name="destinatario" placeholder="tel">
+            </div>
+
+            <form class="app-section">
+                <p>
+                    <a class="btn btn-success" data-toggle="collapse" href="#ora" aria-expanded="false" aria-controls="collapseExample">
+                        Scegli l'ora:
+                    </a>
+                </p>
+                <div class="collapse" id="ora">
+                    <div class="card card-block">
+                        <button type="button" class="btn btn-secondary">08:00</button>
+                        <button type="button" class="btn btn-secondary">08:30</button>
+                        <button type="button" class="btn btn-secondary">09:00</button>
+                        <button type="button" class="btn btn-secondary">09:30</button>
+                        <button type="button" class="btn btn-secondary">10:00</button>
+                        <button type="button" class="btn btn-secondary">10:30</button>
+                        <button type="button" class="btn btn-secondary">11:00</button>
+                        <button type="button" class="btn btn-secondary">11:30</button>
+                        <button type="button" class="btn btn-secondary">12:00</button>
+                        <button type="button" class="btn btn-secondary">12:30</button>
+                        <button type="button" class="btn btn-secondary">13:00</button>
+                        <button type="button" class="btn btn-secondary">13:30</button>
+                        <button type="button" class="btn btn-secondary">14:00</button>
+                        <button type="button" class="btn btn-secondary">14:30</button>
+                        <button type="button" class="btn btn-secondary">15:00</button>
+                        <button type="button" class="btn btn-secondary">15:30</button>
+                        <button type="button" class="btn btn-secondary">16:00</button>
+                        <button type="button" class="btn btn-secondary">16:30</button>
+                        <button type="button" class="btn btn-secondary">17:00</button>
+                        <button type="button" class="btn btn-secondary">17:30</button>
+                        <button type="button" class="btn btn-secondary">18:00</button>
+                        <button type="button" class="btn btn-secondary">18:30</button>
+                        <button type="button" class="btn btn-secondary">19:00</button>
+                        <button type="button" class="btn btn-secondary">19:30</button>
+                        <button type="button" class="btn btn-secondary">20:00</button>
+                        <button type="button" class="btn btn-secondary">20:30</button>
+                        <button type="button" class="btn btn-secondary">21:00</button>
+
+                    </div>
+                </div>
+            </form>
+
+            <form class="app-section">
+                <p>
+                    <a class="btn btn-success" data-toggle="collapse" href="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
+                        Trattamenti
+                    </a>
+                </p>
+                <div class="collapse" id="collapseExample">
+                    <div class="card card-block">
+                        <button type="button" class="btn btn-secondary">Piega</button>
+                        <button type="button" class="btn btn-secondary">Taglio</button>
+                        <button type="button" class="btn btn-secondary">Colore</button>
+                    </div>
+                </div>
+                <textarea class="app-input" id="message" name="message" placeholder="note..."></textarea>
+                <div class="app-button green app-submit btn" id = "send-button">Invia</div>
+            </form>
+        </div>
+    </div>
+	
+	<div class="app-page" data-page="estetica">
+        <div class="app-topbar">
+            <div class="app-title">Prenota il tuo trattamento</div>
+            <div class="right app-button" data-back>Fine</div>
+        </div>
+
+        <div class="app-content">
+
+            <div class="app-section">
+                Nome<input class="app-input" id="mittente" name="mittente" placeholder="nome">
+            </div>
+
+            <div class="app-section">
+                telefono<input class="app-input" id="tel" name="destinatario" placeholder="tel">
+            </div>
+
+            <form class="app-section">
+                <p>
+                    <a class="btn btn-success" data-toggle="collapse" href="#ora" aria-expanded="false" aria-controls="collapseExample">
+                        Scegli l'ora:
+                    </a>
+                </p>
+                <div class="collapse" id="ora">
+                    <div class="card card-block">
+                        <button type="button" class="btn btn-secondary">08:00</button>
+                        <button type="button" class="btn btn-secondary">08:30</button>
+                        <button type="button" class="btn btn-secondary">09:00</button>
+                        <button type="button" class="btn btn-secondary">09:30</button>
+                        <button type="button" class="btn btn-secondary">10:00</button>
+                        <button type="button" class="btn btn-secondary">10:30</button>
+                        <button type="button" class="btn btn-secondary">11:00</button>
+                        <button type="button" class="btn btn-secondary">11:30</button>
+                        <button type="button" class="btn btn-secondary">12:00</button>
+                        <button type="button" class="btn btn-secondary">12:30</button>
+                        <button type="button" class="btn btn-secondary">13:00</button>
+                        <button type="button" class="btn btn-secondary">13:30</button>
+                        <button type="button" class="btn btn-secondary">14:00</button>
+                        <button type="button" class="btn btn-secondary">14:30</button>
+                        <button type="button" class="btn btn-secondary">15:00</button>
+                        <button type="button" class="btn btn-secondary">15:30</button>
+                        <button type="button" class="btn btn-secondary">16:00</button>
+                        <button type="button" class="btn btn-secondary">16:30</button>
+                        <button type="button" class="btn btn-secondary">17:00</button>
+                        <button type="button" class="btn btn-secondary">17:30</button>
+                        <button type="button" class="btn btn-secondary">18:00</button>
+                        <button type="button" class="btn btn-secondary">18:30</button>
+                        <button type="button" class="btn btn-secondary">19:00</button>
+                        <button type="button" class="btn btn-secondary">19:30</button>
+                        <button type="button" class="btn btn-secondary">20:00</button>
+                        <button type="button" class="btn btn-secondary">20:30</button>
+                        <button type="button" class="btn btn-secondary">21:00</button>
+
+                    </div>
+                </div>
+            </form>
+
+
+            <form class="app-section">
+                <p>
+                    <a class="btn btn-success" data-toggle="collapse" href="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
+                        Trattamenti
+                    </a>
+                </p>
+                <div class="collapse" id="collapseExample">
+                    <div class="card card-block">
+                        <button type="button" class="btn btn-secondary">Unghie</button>
+                        <button type="button" class="btn btn-secondary">Ceretta</button>
+                        <button type="button" class="btn btn-secondary">Piega</button>
+                    </div>
+                </div>
+                <textarea class="app-input" id="message" name="message" placeholder="note..."></textarea>
+                <div class="app-button green app-submit btn" id = "send-button">Invia</div>
+            </form>
+        </div>
+    </div>
+	
+    <script src="zepto.js"></script>
+    <script src="app.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
+<script>
+
+    App.controller('home', function (page) {
+
+
+    });
+
+    App.controller('parrucchieri', function (page) {
+
+        if (typeof localStorage !== 'undefined') {
+
+            if (localStorage.getItem('mittente') !== null) {
+                $(page).find("#mittente").val(localStorage.getItem('mittente'));
+                if (localStorage.getItem('tel') !== null) {
+                    $(page).find("#tel").val(localStorage.getItem('tel'));
+                }
+            }
+
+            $(page).find("#send-button")
+                .clickable()
+                .on('click',function () {
+                    $("#message").val("ciao");
+                });
+
+        } else {
+            alert("cambia browser");
+        }
+
+    });
+
+    /*App.controller('parruServ', function (page) {
+
+        $(page).find('li')
+               .clickable()
+               .on('click',function () {
+                   $("#message").val("ciao");
+               });
+
+    }); */
+
+    try {
+        App.restore();
+    } catch (err) {
+        App.load('home');
+    }
+</script>
+</body>
+</html>
+
