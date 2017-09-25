@@ -1,7 +1,4 @@
 <!DOCTYPE html>
-
-
-prova
 <html>
   <head>
       <title>My App</title>
